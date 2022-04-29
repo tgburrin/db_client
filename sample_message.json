@@ -1,0 +1,12 @@
+[
+	{
+		"operation": "i",
+		"handler": "subscriptions",
+		"operation_flags": ["delta"],
+		"data" : {
+			"subscription_id": "sub_abc123",
+			"customer_id": "cus_def456",
+			"quantity": 1
+		}
+	}
+]

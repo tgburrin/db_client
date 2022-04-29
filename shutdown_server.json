@@ -1,0 +1,11 @@
+[
+	{
+		"operation": "c",
+		"handler": "admin_functions",
+		"operation_flags": [],
+		"data" : {
+			"action": "shutdown"
+		}
+	}
+]
+

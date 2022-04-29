@@ -4,7 +4,7 @@
  Author      : Tim Burrington
  Version     :
  Copyright   : 
- Description : Hello World in C, Ansi-style
+ Description : db client to be paired with db_project
  ============================================================================
  */
 #include <stdio.h>

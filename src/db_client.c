@@ -216,6 +216,19 @@ int main(int argc, char **argv) {
 		size_t wrb = send(client_sd, msg, msglen + sizeof(char) + sizeof(uint16_t), 0);
 		printf("Wrote %ld bytes to socket\n", wrb);
 		free(msg);
+
+		void *resp = malloc(4096);
+		size_t rrb = recv(client_sd, resp, 4096, 0);
+		if ( ((char *)resp)[0] == stx ) {
+			uint16_t respsz = ntohs(*((uint16_t *)(resp+1)));
+			char *msg = malloc(respsz+1);
+			bzero(msg, respsz+1);
+
+			memcpy(msg, resp + sizeof(char) + sizeof(uint16_t), respsz);
+			printf("Response Message (%d bytes): %s\n", respsz, msg);
+			free(msg);
+		}
+		free(resp);
 		close(client_sd);
 		rv = EXIT_SUCCESS;
 	}

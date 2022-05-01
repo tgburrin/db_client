@@ -1,11 +1,8 @@
-[
-	{
-		"operation": "c",
-		"handler": "admin_functions",
-		"operation_flags": [],
-		"data" : {
-			"action": "shutdown"
-		}
+{
+	"handler": "admin_functions",
+	"operation": "",
+	"operation_flags": [],
+	"data" : {
+		"action": "shutdown"
 	}
-]
-
+}

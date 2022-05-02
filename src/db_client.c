@@ -108,7 +108,7 @@ char *read_json_file(char *filename) {
 	bzero(buff, buffsz);
 
 	for (;;) {
-		printf("Reading file %ld bytes from file\n", buffsz);
+		printf("Reading up to %ld bytes from file\n", buffsz);
 		if ( (i = fread(buff +  rb, buffsz, 1, fdf)) == 0 && !feof(fdf)) {
 			fprintf(stderr, "Unable to read from file\n");
 			free(buff);
